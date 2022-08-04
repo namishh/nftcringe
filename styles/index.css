@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,700&display=swap');
+:root {
+  --bg-color : #0a1011;
+  --fg-color : #d7e0e0;
+  --red : #df5b61;
+  --green : #6ec587;
+  --yellow : #deb26a;
+  --blue :#659bdb;
+  --magenta : #c167d9;
+  --cyan : #6fd1d5; 
+  --black : #121b1c;
+  --white : #c5d7d7;
+}
+
+
+
+* {
+  font-family: "Rubik", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+html {
+  font-size: 62.5%;
+}
+body {
+  padding: 2rem;
+  background-color: var(--fg-color);
+}
+.header {
+  position: relative;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  background-image: url("../assests/background.jpg"), linear-gradient(to bottom, #0a1011ee , #0a1011cc);
+  background-blend-mode: overlay;
+  clip-path: polygon(0 0, 100% 0%, 100% 90%, 0% 100%);
+}
+
+a, a:link, a:visited {
+  text-decoration: none;
+  color: var(--fg-color);
+}
+
+.header-primary {
+  text-align: center;
+  font-weight: 800;
+  font-size: 9rem;
+  letter-spacing: .5rem;
+  color: var(--fg-color);
+}
+
+.header-button , .header-button:visited, .header-button:link {
+  background-color: var(--blue);
+  padding: 1.5rem 3rem;
+  font-size: 2.4rem;
+  color: var(--fg-color);
+  text-decoration: none;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+
+.section {
+  padding: 10rem;
+}
+
+.heading {
+  font-size: 4.6rem;
+  text-align: center;
+  color: var(--black);
+  font-weight: 700;
+  margin-bottom: 6rem;
+}
+
+.section-content {
+  width: 100%;
+  display: flex;
+  justify-content: center; 
+  gap: 10rem;
+}
+
+@media only screen and (max-width: 1200px){
+  .section-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
+.image-collage {
+  padding : 1rem;
+  width: 40rem;
+  position: relative;
+  margin-bottom: 15rem;
+}
+.collage-img {
+  height: 40rem;
+  position: absolute;
+  border-radius: 10px;
+  transition: .4s;
+  box-shadow: 0 0 2rem #0a101177;
+}
+
+@media only screen and (max-width: 1200px){
+  .image-collage{
+    margin-bottom: 8rem;
+  }
+}
+@media only screen and (max-width: 654px){
+  .image-collage{
+    margin-bottom: 3rem;
+  }
+}
+.img2 {
+  z-index: 3;
+  height: 24rem;
+  left: -3rem;
+  bottom: -15rem;
+}
+
+.img3 {
+  z-index: 2;
+  height: 23rem;
+  right: -8rem;
+  bottom: -10rem;
+}
+
+@media only screen and (max-width: 654px){
+  .collage-img {
+    height: 32rem;
+  }
+  .img3 {
+    height: 15rem;
+    bottom: -5rem;
+    right: -4rem;
+  }
+
+  .img2 {
+    height: 16rem;
+    bottom: -5rem;
+  }
+}
+@media only screen and (max-width: 1504px){
+  .section-text-content {
+    font-size: 1.6rem;
+  }
+}
+
+.collage-img:hover {
+  z-index: 40;
+  transform: scale(1.1);
+  outline: 7px solid var(--blue);
+  outline-offset: .7rem;
+  box-shadow: 0 0 1rem #0a101122;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.section-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  font-size: 2.1rem;
+  font-weight: 400;
+  width: 50%;
+}
+
+@media only screen and (max-width: 1200px){
+  .section-text-content {
+    width: 78%;
+  }
+}
+@media only screen and (max-width: 750px){
+  .section-text-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1504px){
+  .section-text-content {
+    font-size: 1.9rem;
+  }
+}
+.section-text {
+  color: var(--black);
+}
+
+.section-text-heading {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+@media only screen and (max-width: 1504px){
+  .section-text-heading {
+      margin-bottom: .5rem;
+  }
+}
+
+.negative {
+  background-color: var(--bg-color);
+  transform: skewY(-2deg);
+}
+
+.negative-content {
+  transform: skewY(2deg);
+}
+
+.heading-white { 
+  color: var(--fg-color);
+}
+
+.heading-negative {
+  margin-top: 2rem;
+}
+
+.link:link, .link:visited, .link {
+  display: block;
+  color: var(--black);
+  position: relative;
+}
+.link::after {
+  content: '';
+  width: 3rem;
+  height: .3rem;
+  border-radius: 4px;
+  background-color: var(--black);
+  position: absolute;
+  bottom: -1rem;
+  left: .2rem;
+  transition: .3s;
+}
+
+.link:hover::after {
+  width: 17rem;
+}
+
+.review {
+  background-color: var(--fg-color);
+  padding: 5rem;
+  border-radius: 12px;
+  width: 50rem;
+}
+
+.review-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-text {
+  position: relative;
+  margin-top: 5rem;
+  font-size: 2.4rem;
+  font-weight: 300;
+  line-height: 4.1rem;
+}
+.review-text::before{
+  content:"\0022";
+  font-size: 20rem;
+  position: absolute;
+  left: -2rem;
+  color: #2e2e2e;
+  font-family: 'BIZ UDMincho', serif;
+}
+.review-pfp {
+  height: 7rem;
+  border-radius: 50%;
+}
+
+.review-info {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-name {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.review-job {
+  font-size: 1.6rem;
+}
+
+.review-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.reason {
+  width: 75rem;
+  height: 35rem;
+  padding: 3rem;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0rem 0rem .3rem rgba(0,0,0,0.1);
+}
+
+.reasons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4rem;
+   
+}
+
+.reason-icon {
+  font-size: 8rem;
+}
+
+.reason-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.reason-title {
+  font-size: 3.6rem;
+  font-weight: 200;
+}
+
+.reason-text { 
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 4.1rem;
+}
+
+.green-dark {
+  color: #346341;
+}
+
+.red-dark {
+  color : #a8383d;
+}
+
+.blue-dark {
+  color: #436ea3;
+}
+
+.yellow-dark {
+  color : #916c30;
+}
+
+.reason-sec {
+  margin-bottom: 8rem;
+}
+
+.below {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--bg-color);
+  font-size: 1.6rem;
+}
+
+/* MEDIA QUERIES */
