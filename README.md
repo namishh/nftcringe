@@ -1,2 +1,1 @@
 ## NFTs are Cringe!
-n
