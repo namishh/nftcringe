@@ -398,6 +398,11 @@ a:visited {
 
   .reason-icon {
     font-size: 4rem;
+    margin-right: 1rem;
+  }
+
+  .reason-title {
+    font-size: 2.5rem;
   }
 
   .reason {
