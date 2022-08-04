@@ -405,7 +405,25 @@ a:visited {
     font-size: 2.5rem;
   }
 
-  .reason {
+  .reason { 
     height: 45rem;
+  }
+
+  .image-collage {
+    padding: .5rem;
+    width: 25rem;
+  }
+
+  .collage-img {
+    height: 25rem;
+  }
+
+  .img2 {
+    height: 14.375rem;
+  }
+
+  .img3 {
+    height: 14.375rem;
+    bottom: -10rem;
   }
 }
